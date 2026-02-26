@@ -110,7 +110,7 @@ body {
 
 #vanta-bg h1 {
     color: #FFFFFF;
-    font-size: 2.5rem;
+    font-size: clamp(4rem, 8vw, 50%);
     margin-bottom: 16px;
     z-index: 1;
     position: relative;
@@ -118,7 +118,7 @@ body {
 
 #vanta-bg p {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 1.1rem;
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
     z-index: 1;
     position: relative;
 }
@@ -230,4 +230,29 @@ body {
         padding: 0;
         gap: 30px;
     }
+}
+
+/* BOTON DE PROYECTOS*/
+
+.btn-proyectos {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 60px;
+    background: #ff3f81;
+    color: #FFFFFF;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    text-decoration: none;
+    z-index: 1;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 20px rgba(255, 63, 129, 0.4);
+}
+
+.btn-proyectos:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(255, 63, 129, 0.6);
 }
