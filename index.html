@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Margareth Villanueva</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Vanta.js solo para la sección inicio -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
 </head>
 <body>
 
+    <!-- NAVBAR -->
     <nav class="nav-fixed">
         <div class="logo">
-            <img src="tu-imagen.png" alt="Margareth">
+            <img src="fotohd.png"
+            " alt="Margareth">
             <span>Margareth Villanueva</span>
         </div>
 
@@ -28,12 +34,15 @@
         </div>
     </nav>
 
-    <!-- SECCIONES -->
-    <section id="inicio" class="seccion">
-        <h1>Hola, soy Margareth 👋</h1>
-        <p>Bienvenida a mi portafolio personal.</p>
+    <!-- INICIO con fondo animado -->
+    <section id="inicio">
+        <div id="vanta-bg">
+            <h1>¡Hola! Soy Margareth<br>Desarrolladora Web.</h1>
+            <p>Me inspira crear experiencias digitales atractivas, fluidas y totalmente enfocadas en el usuario.</p>
+        </div>
     </section>
 
+    <!-- RESTO DE SECCIONES sin efecto -->
     <section id="proyectos" class="seccion seccion-gris">
         <h2>Proyectos</h2>
         <p>Aquí van tus proyectos.</p>
