@@ -1,0 +1,185 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    color: #111827;
+}
+
+/* ── NAVBAR ── */
+.nav-fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: #111827;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+/* Links escritorio */
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111827;
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #DB2777;
+}
+
+/* Botón hamburguesa — oculto en escritorio */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 2.5px;
+    background: #111827;
+    margin: 5px 0;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+/* Animación X al abrir */
+.menu-toggle.open .bar:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+}
+.menu-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.menu-toggle.open .bar:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+}
+
+/* ── SECCIONES ── */
+.seccion {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 40px 60px;
+    text-align: center;
+}
+
+.seccion h1 {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+}
+
+.seccion h2 {
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.seccion p {
+    font-size: 1.1rem;
+    color: #6B7280;
+}
+
+.seccion-gris {
+    background: #F9FAFB;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+
+    .nav-fixed {
+        padding: 15px 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: #FFFFFF;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0 20px;
+        gap: 0;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: max-height 0.35s ease, opacity 0.3s ease;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 14px 0;
+        border-bottom: 1px solid #f3f4f6;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    .nav-links.active {
+        max-height: 300px;
+        opacity: 1;
+    }
+}
+
+@media (min-width: 901px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .nav-links {
+        display: flex !important;
+        max-height: none !important;
+        opacity: 1 !important;
+        position: static;
+        flex-direction: row;
+        box-shadow: none;
+        padding: 0;
+        gap: 30px;
+    }
+}
