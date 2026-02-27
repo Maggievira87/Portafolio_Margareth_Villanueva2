@@ -324,3 +324,155 @@ body {
     height: 22px;
     filter: invert(1);
 }
+
+/* Proyectos */
+
+/* ── SECCIÓN PROYECTOS ── */
+.seccion-proyectos {
+    background: #1a0a2e;
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+}
+
+.proyectos-header {
+    text-align: center;
+    padding-top:20px;
+}
+
+.proyectos-header h2 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    letter-spacing: 3px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.linea-fucsia {
+    width: 60px;
+    height: 4px;
+    background: #ff3f81;
+    border-radius: 10px;
+    margin: 0 auto 20px;
+}
+
+.proyectos-header p {
+    color: rgba(255,255,255,0.7);
+    font-size: 1rem;
+    max-width: 600px;
+}
+
+/* ── CARD ── */
+.proyecto-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 900px;
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 2px solid #ff3f81;
+    border-radius: 16px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proyecto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(255, 63, 129, 0.3);
+}
+
+.proyecto-img {
+    width: 300px;
+    height: 300px;
+    min-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.proyecto-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.proyecto-info {
+    text-align: left;
+}
+
+.proyecto-info h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff3f81;
+    margin-bottom: 12px;
+}
+
+.proyecto-info p {
+    font-size: 1rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+.proyecto-btns {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-github {
+    padding: 10px 28px;
+    border: 2px solid #ff3f81;
+    color: #ff3f81;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-github:hover {
+    background: #ff3f81;
+    color: white;
+}
+
+.btn-demo {
+    padding: 10px 28px;
+    background: #ff3f81;
+    color: white;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 63, 129, 0.4);
+}
+
+.btn-demo:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 63, 129, 0.6);
+}
+
+/* ── RESPONSIVE ── */
+
+@media (max-width: 768px) {
+    .proyecto-card {
+        flex-direction: column;
+        gap: 15px;  /* ← reduce el espacio */
+        padding: 20px;  /* ← menos padding */
+    }
+
+    .proyecto-img {
+        width: 100%;
+        height: 200px;
+        min-width: unset;
+    }
+
+    .proyecto-info {
+        text-align: center;
+    }
+
+    .proyecto-btns {
+        justify-content: center;
+    }
+}
