@@ -465,8 +465,13 @@ body {
     border-radius: 16px;
     padding: 50px 45px;
     box-shadow: 0 8px 40px rgba(255,63,129,0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.contacto-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(255,63,129,0.3);
+}
 .contacto-form {
     display: flex;
     flex-direction: column;
@@ -555,9 +560,11 @@ body {
 
 .btn-enviar:disabled {
     opacity: 0.6;
-    cursor: not-allowed;
+    cursor: wait; /* muestra el reloj de carga */
     transform: none;
 }
+
+
 
 /* ── FOOTER ── */
 .footer {
